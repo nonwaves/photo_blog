@@ -21,11 +21,11 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          {% if user.isauthenticated %}
+          {% if user.is_authenticated %}
             <a class="nav-link" href="#">Create Post</a>
             <a class="nav-link" href="#">Users</a>
             <a class="nav-link" href="#">Messaging</a>
-            <a class="nav-link" href="#">Log Out</a>
+            <a class="nav-link" href="{% url 'accounts:logout' %}">Log Out</a>
           {% else %}
             <a class="nav-link" href="#">Users</a>
             <a class="nav-link" href="{% url 'accounts:login' %}">Log In</a>

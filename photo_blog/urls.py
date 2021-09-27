@@ -22,4 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.HomePage.as_view(), name='home'),
     path('accounts/', include('accounts.urls')),
+    path('accounts/',include('django.contrib.auth.urls')),
+    path('loggedout/', views.LogOutPage.as_view(), name='loggedout')
 ]
