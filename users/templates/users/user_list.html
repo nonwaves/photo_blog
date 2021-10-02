@@ -5,6 +5,12 @@
         <div class="container-fluid py-6">
         <h1 class="display-5 fw-bold">User List</h1>
         </div>
+    <ul>
+        {% for profile in profiles %}
+        
+            <li>{{ profile.name }}</li>
+        {% endfor %}
+    </ul>
     </div>
 </div>
 {% endblock content %}

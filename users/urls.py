@@ -1,10 +1,10 @@
-from django.urls import path
-
+from django.urls import path, include
+from .views import UserListView
 from . import views
 
 app_name = 'users'
 
 urlpatterns = [
-    path('', views.profiles, name='profiles'),
+    path('', views.UserListView.as_view(), name='user_list'),
 ]
 
